@@ -45,7 +45,7 @@ def onmode1():
         key9.place(x=55, y=300)
 
 setting = tk.Tk()
-setting.title("[Lai] Editor")
+setting.title("[Darae] Editor")
 setting.geometry("600x400")
 notesel = tk.StringVar(value="-1")
 note = tk.Button(setting, text='수정하기')
