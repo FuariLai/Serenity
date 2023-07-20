@@ -2,7 +2,7 @@ import requests
 from decimal import Decimal
 
 global nowver
-nowver = float(0.0)
+nowver = 0.1
 
 def getLV():
     global defver, iniverorigin
