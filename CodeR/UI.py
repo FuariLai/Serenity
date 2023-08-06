@@ -67,22 +67,27 @@ def fn2():
                 showvalue.set(lines[cs].strip())
                 now.set("ColumnStart: " + value.get() + "\n")
                 originvar.set("ColumnStart: 294")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "2"):
                 showvalue.set(lines[ch].strip())
                 now.set("HitPosition: " + value.get() + "\n")
                 originvar.set("HitPosition: 446")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "3"):
                 now.set("세부설정에서 설정하세요")
                 originvar.set("세부설정에서 설정하세요")
+                small.place(x=480, y=310, width=60, height=20)
                 root.after(10, onmode)
             elif(modevar.get() == "4"):
                 showvalue.set(lines[cp].strip())
                 now.set("ComboPosition: " + value.get() + "\n")
                 originvar.set("ComboPosition: 150")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "5"):
+                small.place_forget()
                 with Image.open(perpath) as image1:
                     width, height = image1.size
                     imagesc = (98 - scale.get()) * 20 * (4/3)
@@ -102,21 +107,26 @@ def fn2():
                 showvalue.set(lines[cs].strip())
                 now.set("ColumnStart: " + value.get() + "\n")
                 originvar.set("ColumnStart: 299")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "2"):
                 showvalue.set(lines[ch].strip())
                 now.set("HitPosition: " + value.get() + "\n")
                 originvar.set("HitPosition: 444")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "3"):
                 now.set("세부설정에서 설정하세요")
                 originvar.set("세부설정에서 설정하세요")
+                small.place(x=480, y=310, width=60, height=20)
             elif(modevar.get() == "4"):
                 showvalue.set(lines[cp].strip())
                 now.set("ComboPosition: " + value.get() + "\n")
                 originvar.set("ComboPosition: 150")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "5"):
+                small.place_forget()
                 with Image.open(perpath) as image1:
                     width, height = image1.size
                     imagesc = (98 - scale.get()) * 20 * (4/3)
@@ -136,21 +146,26 @@ def fn2():
                 showvalue.set(lines[cs].strip())
                 now.set("ColumnStart: " + value.get() + "\n")
                 originvar.set("ColumnStart: 273")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "2"):
                 showvalue.set(lines[ch].strip())
                 now.set("HitPosition: " + value.get() + "\n")
                 originvar.set("HitPosition: 444")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "3"):
                 now.set("세부설정에서 설정하세요")
                 originvar.set("세부설정에서 설정하세요")
+                small.place(x=480, y=310, width=60, height=20)
             elif(modevar.get() == "4"):
                 showvalue.set(lines[cp].strip())
                 now.set("ComboPosition: " + value.get() + "\n")
                 originvar.set("ComboPosition: 150")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "5"):
+                small.place_forget()
                 with Image.open(perpath) as image1:
                     width, height = image1.size
                     imagesc = (98 - scale.get()) * 20 * (4/3)
@@ -170,21 +185,26 @@ def fn2():
                 showvalue.set(lines[cs].strip())
                 now.set("ColumnStart: " + value.get() + "\n")
                 originvar.set("ColumnStart: 247")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "2"):
                 showvalue.set(lines[ch].strip())
                 now.set("HitPosition: " + value.get() + "\n")
                 originvar.set("HitPosition: 444")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "3"):
                 now.set("세부설정에서 설정하세요")
                 originvar.set("세부설정에서 설정하세요")
+                small.place(x=480, y=310, width=60, height=20)
             elif(modevar.get() == "4"):
                 showvalue.set(lines[cp].strip())
                 now.set("ComboPosition: " + value.get() + "\n")
                 originvar.set("ComboPosition: 150")
+                small.place_forget()
                 root.after(10, onmode)
             elif(modevar.get() == "5"):
+                small.place_forget()
                 with Image.open(perpath) as image1:
                     width, height = image1.size
                     imagesc = (98 - scale.get()) * 20 * (4/3)
@@ -226,7 +246,7 @@ def option():
                 file.writelines(lines)
             file.close()
         if(modevar.get() == "3"):
-            mode3()
+            pass
         if(modevar.get() == "4"):
             B = "ComboPosition: " + value.get() + "\n"
             with open(nowpath, 'r') as file:
@@ -258,7 +278,7 @@ def option():
                 file.writelines(lines)
             file.close()
         if(modevar.get() == "3"):
-            mode3()
+            pass
         if(modevar.get() == "4"):
             B = "ComboPosition: " + value.get() + "\n"
             with open(nowpath, 'r') as file:
@@ -290,7 +310,7 @@ def option():
                 file.writelines(lines)
             file.close()
         if(modevar.get() == "3"):
-            mode3()
+            pass
         if(modevar.get() == "4"):
             B = "ComboPosition: " + value.get() + "\n"
             with open(nowpath, 'r') as file:
@@ -322,7 +342,7 @@ def option():
                 file.writelines(lines)
             file.close()
         if(modevar.get() == "3"):
-            mode3()
+            pass
         if(modevar.get() == "4"):
             B = "ComboPosition: " + value.get() + "\n"
             with open(nowpath, 'r') as file:
@@ -382,6 +402,8 @@ modetext = tk.Label(root, text='변경하실 옵션을 선택해 주세요.', fo
 modetext.place(x=55, y=130)
 button = tk.Button(root, text='변경', command=option, background="#C0E1FF", activebackground="#C0E1FF")
 button.place(x=450, y=340, width=120, height=40)
+small = tk.Button(root, text='세부설정', command=mode3)
+small.place_forget
 selectk = keyvar.get()
 selectm = modevar.get()
 showvalue = tk.StringVar(value="0")

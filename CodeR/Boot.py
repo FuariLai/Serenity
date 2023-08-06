@@ -1,6 +1,6 @@
 import subprocess as sp
 
 def startUI():
-    sp.run(['python', '../Serenity/CodeR/UI.py'])
+    sp.run(['python', 'CodeR/UI.py'])
 def startSel():
-    sp.run(['python', '../Serenity/CodeR/Sel.py'])
+    sp.run(['python', 'CodeR/Sel.py'])

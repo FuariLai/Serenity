@@ -1,7 +1,22 @@
 import tkinter as tk
+from tkinter import PhotoImage
+from PIL import Image
 
+def go():
+    selectednote()
+    update_image()
 def selectednote():
     pass
+def update_image():
+    if not notesel1.get() == "Image/blank.png":
+        textt.place(x=350, y=70)
+    image_name = notesel1.get()
+    image1 = Image.open(image_name)
+    image1.thumbnail((120, 120))
+    image1.save(image_name)
+    image = PhotoImage(file=image_name)
+    label.config(image=image)
+    label.Ntimage = image
 def onmode1():
     if notesel.get() == "1":
         key1.place_forget()
@@ -45,7 +60,7 @@ def onmode1():
         key9.place(x=55, y=300)
 
 setting = tk.Tk()
-setting.title("[Darae] Editor")
+setting.title("[Lai] Editor")
 setting.geometry("600x400")
 notesel = tk.StringVar(value="-1")
 note = tk.Button(setting, text='수정하기')
@@ -58,26 +73,31 @@ keybeamsel = tk.IntVar(value=-1)
 keybeam = tk.Checkbutton(setting, text="키빔 표시", variable=keybeamsel)
 keybeam.place(x=350, y=347)
 keybeam.place()
-notesel1 = tk.StringVar(value="-1")
-note1 = tk.Radiobutton(setting, text='Alpha', command=selectednote, variable=notesel1, value="1")
+NtImage = PhotoImage(file="Image/blank.png")
+label = tk.Label(setting, image=NtImage)
+label.place(x=350, y=100, width=120, height=120)
+textt = tk.Label(setting, text="미리보기")
+textt.place_forget()
+notesel1 = tk.StringVar(value="Image/blank.png")
+note1 = tk.Radiobutton(setting, text='Alpha', value="Image/alpha.png", command=go, variable=notesel1)
 note1.place_forget
-note2 = tk.Radiobutton(setting, text='Arrow', command=selectednote, variable=notesel1, value="2")
+note2 = tk.Radiobutton(setting, text='Arrow', value="Image/arrow.png", command=go, variable=notesel1)
 note2.place_forget
-note3 = tk.Radiobutton(setting, text='Bar', command=selectednote, variable=notesel1, value="3")
+note3 = tk.Radiobutton(setting, text='Bar', value="Image/bar.png", command=go, variable=notesel1)
 note3.place_forget
-note4 = tk.Radiobutton(setting, text='Circle(Bojii)', command=selectednote, variable=notesel1, value="4")
+note4 = tk.Radiobutton(setting, text='Circle(Bojii)', value="Image/circlebo.png", command=go, variable=notesel1)
 note4.place_forget
-note5 = tk.Radiobutton(setting, text='Circle(Original)', command=selectednote, variable=notesel1, value="5")
+note5 = tk.Radiobutton(setting, text='Circle(Original)', value="Image/circleor.png", command=go, variable=notesel1)
 note5.place_forget
-note6 = tk.Radiobutton(setting, text='Circle(Big)', command=selectednote, variable=notesel1, value="6")
+note6 = tk.Radiobutton(setting, text='Circle(Big)', value="Image/circlebi.png", command=go, variable=notesel1)
 note6.place_forget
-note7 = tk.Radiobutton(setting, text='Diamond', command=selectednote, variable=notesel1, value="7")
+note7 = tk.Radiobutton(setting, text='Diamond', value="Image/rhombus.png", command=go, variable=notesel1)
 note7.place_forget
-note8 = tk.Radiobutton(setting, text='Round Diamond', command=selectednote, variable=notesel1, value="8")
+note8 = tk.Radiobutton(setting, text='Round Diamond', value="Image/rounddia.png", command=go, variable=notesel1)
 note8.place_forget
-note9 = tk.Radiobutton(setting, text='Round Diamond(No Gradient)', command=selectednote, variable=notesel1, value="9")
+note9 = tk.Radiobutton(setting, text='Round Diamond(No Gradient)', value="Image/rounddiano.png", command=go, variable=notesel1)
 note9.place_forget
-note10 = tk.Radiobutton(setting, text='Rskin', command=selectednote, variable=notesel1, value="10")
+note10 = tk.Radiobutton(setting, text='Rskin', value="Image/rskin.png", command=go, variable=notesel1)
 note10.place_forget
 
 notesel2 = tk.StringVar(value="-1")

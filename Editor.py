@@ -2,6 +2,7 @@ from CodeR import Boot
 from Def import VeC
 import tkinter as tk
 import webbrowser
+import subprocess as sp
 
 def stop():
     webbrowser.open_new("https://github.com/FuariLai/Serenity")
